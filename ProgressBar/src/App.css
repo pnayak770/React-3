@@ -1,0 +1,48 @@
+* {
+    background-color: #000;
+  }
+  
+  .App {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+ 
+  .progress-container {
+    position: relative;
+  }
+  
+  .progress-ring {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 0 20px rgb(222, 49, 99);
+  }
+  
+  .progress-ring svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .progress-ring .message,
+  .progress-ring .progress {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 24px;
+  }
+  
+  .progress-ring__circle {
+    transition: stroke-dashoffset 0.35s;
+  }
+  
+  .progress-ring__circle--progress {
+    stroke-linecap: round;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+  }
+  
